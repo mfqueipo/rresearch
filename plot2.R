@@ -6,5 +6,6 @@ new_data<-subset( data2, Date>="2007-02-01" & Date<= "2007-02-02")
 
 new_data$Global_active_power<-as.numeric(levels(new_data$Global_active_power)[new_data$Global_active_power])
 
-lot2<-plot(new_data$Global_active_power, type="l",xaxt = 'n',ylab="Global Active Power (kilowatts)")
+plot2<-plot(new_data$Global_active_power, type="l",xaxt = 'n',ylab="Global Active Power (kilowatts)",xlab="")
 axis(1, at=c(1,nrow(new_data)/2,nrow(new_data)),labels=c("Thu","Fri","Sat"))
+
